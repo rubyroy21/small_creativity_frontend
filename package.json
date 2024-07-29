@@ -2,9 +2,10 @@
   "name": "for_kashish",
   "version": "1.0.0",
   "description": "",
+  "source": "src/index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel",
+    "build": "parcel build --dist-dir public"
   },
   "author": "",
   "license": "ISC",
