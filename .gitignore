@@ -1,0 +1,7 @@
+/node_modules
+/src/components/Message.js
+/src/utils
+/dist
+.parcel-cache
+# Local Netlify folder
+.netlify

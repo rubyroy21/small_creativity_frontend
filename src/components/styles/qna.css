@@ -1,0 +1,129 @@
+.qna-container {
+  background-image: url("../../../assets/hinata.jpg"); /* Adjust the path to your image */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  /* background-color: #fff; */
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 650px;
+  padding: 6rem;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.loader .spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #cd5755;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.loading-bar-progress {
+  background-color: #000;
+  height: 100%;
+  width: 0;
+  transition: 0.3s ease;
+}
+
+h2 {
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+ul li input {
+  display: none;
+}
+
+ul li label {
+  cursor: pointer;
+  display: block;
+  color: black;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.1s ease;
+}
+
+ul li input:hover + label {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+ul li input:checked + label {
+  outline: 2px solid #000;
+  color: black;
+}
+
+/* Styling for the textarea */
+.qna-container textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical; /* Allows vertical resizing only */
+  min-height: 100px; /* Sets a minimum height for the textarea */
+  margin-top: 5px;
+}
+
+button {
+  border-radius: 20px;
+  background-color: white;
+  color: #000;
+  font-family: inherit;
+  border: none;
+  display: block;
+  cursor: pointer;
+  margin: auto;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1rem;
+  transition: 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
