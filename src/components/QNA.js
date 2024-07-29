@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles/qna.css";
 import qnaData from "../utils/qnaData";
 import apiClient from "../utils/apiClient";
+import axios from "axios";
 
 const QNA = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -28,7 +29,7 @@ const QNA = () => {
       setLoading(true);
 
       try {
-        await apiClient.post("/api/submit-response", {
+        await axios.post("http://localhost:5000/api/submit-response", {
           questionId: currentQuestion, // Changed from new Date() to currentQuestion for simplicity
           answer,
           textAnswer,
@@ -45,10 +46,7 @@ const QNA = () => {
       } else {
         setFinished(true);
         try {
-          await apiClient
-            .get("/api/log-click")
-            .then((res) => console.log(res))
-            .catch((errors) => console.log(errors));
+          await axios.get("http://localhost:5000/api/log-click");
         } catch (error) {
           console.error("Error logging click:", error);
         }
