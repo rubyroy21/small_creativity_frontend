@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./styles/qna.css";
 import qnaData from "../utils/qnaData";
-import axios from "axios";
 import apiClient from "../utils/apiClient";
 
 const QNA = () => {
